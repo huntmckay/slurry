@@ -1,0 +1,11 @@
+# host 2 ssh config
+Host cvte
+    Hostname 10.50.147.188  # Update with your IP
+    User cvte
+    DynamicForward 9999
+
+Host ws1
+    Hostname 10.50.11.34  # Update with your IP
+    User student
+    ProxyJump cvte
+    LocalForward 48484 10.10.0.5:3389

@@ -1,0 +1,29 @@
+# Host 3 ssh config
+Host adm
+    HostName 10.50.11.34
+    User student
+
+Host dc
+    HostName 10.10.0.10
+    User student
+    ProxyJump adm
+
+Host terra
+    HostName 10.10.0.6
+    User garviel
+    ProxyJump adm
+
+Host fs
+    HostName 10.10.0.3
+    User andy.dwyer
+    ProxyJump adm
+
+Host ws2
+    HostName 10.10.0.4
+    User andy.dwyer
+    ProxyJump adm
+
+Host minas_tirith
+    HostName 10.10.0.7
+    User bombadil
+    ProxyJump adm
